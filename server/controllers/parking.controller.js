@@ -146,20 +146,15 @@ const getMinDistanceVertex = (distance, visited) => {
 const findShortestPathAndCalculateCost = async (sourceGateId, destinationGateId, tollGateID) => {
     const tollGateConnections = await pool.query('SELECT * FROM TollGateAdjacency WHERE TollGateID = $1', [tollGateID]);
     const graph = {};
-
     tollGateConnections.rows.forEach((connection) => {
         const { gateid1, gateid2, charges } = connection;
-
         if (!graph[gateid1]) {
             graph[gateid1] = [];
         }
-
         graph[gateid1].push({ gateId2: gateid2, charges });
-
         if (!graph[gateid2]) {
             graph[gateid2] = [];
         }
-
         graph[gateid2].push({ gateId2: gateid1, charges });
     });
     return await dijkstra(graph, sourceGateId, destinationGateId);
