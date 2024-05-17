@@ -1,0 +1,52 @@
+.points-management-container {
+    margin: 20px;
+    font-family: 'Arial', sans-serif;
+  }
+
+.table-row {
+    background-color: rgba(242, 242, 101, 0.669)
+}
+  
+  .points-list {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .point-item {
+    border: 1px solid #e0e0e0;
+    margin-bottom: 10px;
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s;
+  }
+  
+  .point-item:hover {
+    background-color: #f9f9f9;
+  }
+  
+  .point-buttons {
+    display: flex;
+    gap: 10px;
+  }
+  
+  .edit-point-form,
+  .create-point-form {
+    margin-top: 20px;
+    border: 1px solid #e0e0e0;
+    padding: 15px;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .edit-point-buttons {
+    margin-top: 10px;
+    display: flex;
+    gap: 10px;
+  }
+  
+  /* Add more styles as needed */
+  
